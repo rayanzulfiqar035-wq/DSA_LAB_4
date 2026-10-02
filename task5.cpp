@@ -120,6 +120,11 @@ public :
         }
         node* curr = head;
         node* prev = nullptr;
+        if(curr->data == target){
+            head = curr->next ;
+            delete curr;
+            return;
+        }
         
         while(curr!=NULL){
             if(curr->data == delData){
